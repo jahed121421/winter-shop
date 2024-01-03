@@ -1,0 +1,44 @@
+[
+  {
+    "productName": "Margherita Pizza",
+    "sellerName": "Pizza Paradise",
+    "description": "Classic tomato, mozzarella, and basil pizza",
+    "price": 12.99,
+    "quantity": 0
+  },
+  {
+    "productName": "Chicken Alfredo Pasta",
+    "sellerName": "Pasta Palace",
+    "description": "Creamy Alfredo sauce with grilled chicken",
+    "price": 14.99,
+    "quantity": 0
+  },
+  {
+    "productName": "Vegetarian Sushi Roll",
+    "sellerName": "Sushi Haven",
+    "description": "Assorted vegetables rolled in seaweed and rice",
+    "price": 9.99,
+    "quantity": 0
+  },
+  {
+    "productName": "Caesar Salad",
+    "sellerName": "Salad Delight",
+    "description": "Romaine lettuce, croutons, and Caesar dressing",
+    "price": 8.99,
+    "quantity": 0
+  },
+  {
+    "productName": "Soda",
+    "sellerName": "Beverage Buzz",
+    "description": "Refreshing carbonated drink",
+    "price": 2.49,
+    "quantity": 0
+  },
+  {
+    "productName": "Iced Tea",
+    "sellerName": "Cool Quencher",
+    "description": "Chilled iced tea",
+    "price": 2.99,
+    "quantity": 0
+  }
+]
