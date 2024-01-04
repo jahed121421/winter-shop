@@ -3,6 +3,7 @@ import useUserData from "../../Coustom Hook/useUserData";
 import Title from "../Title/Title";
 import Swal from "sweetalert2";
 import React from "react";
+import { Trash } from "@phosphor-icons/react/dist/ssr";
 
 const AllUser = () => {
   const [userData, refetch, isLoading] = useUserData();
@@ -58,7 +59,9 @@ const AllUser = () => {
                       saller
                     </button>{" "}
                   </td>
-                  <td>Blue</td>
+                  <td>
+                    <Trash />
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -3,6 +3,7 @@ import useUserData from "../../Coustom Hook/useUserData";
 import Swal from "sweetalert2";
 import Title from "../Title/Title";
 import React from "react";
+import { Trash } from "@phosphor-icons/react";
 const UserControl = () => {
   const [userData, refetch, isLoading] = useUserData();
   if (isLoading) {
@@ -26,6 +27,12 @@ const UserControl = () => {
       } else {
         Swal.fire("user already saller", "", "error");
       }
+    });
+  };
+  const DeleteUser = (id) => {
+    axios.delete(`http://localhost:3000/delete/${id}`).then((res) => {
+      console.log(res.data);
+      refetch();
     });
   };
   return (
@@ -72,7 +79,13 @@ const UserControl = () => {
                       saller
                     </button>{" "}
                   </td>
-                  <td>Blue</td>
+                  <td>
+                    <Trash
+                      onClick={() => DeleteUser(userDatas._id)}
+                      size={22}
+                      className="cursor-pointer"
+                    />
+                  </td>
                 </tr>
               ))}
             </tbody>

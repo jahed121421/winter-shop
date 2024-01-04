@@ -33,13 +33,10 @@ const DashBoard = () => {
               <ActiveLink>Home</ActiveLink>
             </li>
             <li>
-              <ActiveLink>Add product</ActiveLink>
+              <ActiveLink href="/user-list">User control</ActiveLink>
             </li>
             <li>
-              <ActiveLink>update Product</ActiveLink>
-            </li>
-            <li>
-              <ActiveLink>My product list</ActiveLink>
+              <ActiveLink href="/all-post">Post control Control</ActiveLink>
             </li>
           </ul>
         ) : (
