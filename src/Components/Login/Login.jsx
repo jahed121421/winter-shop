@@ -24,10 +24,13 @@ const Login = () => {
         const data = {
           email: user_email,
         };
-        axios
-          .post("http://localhost:3000/user-data-post", data)
-          .then((res) => console.log(res.data))
-          .catch((err) => console.log(err));
+        axios.post("http://localhost:3000/jwt", data).then((res) => {
+          localStorage.setItem("token", res.data);
+          axios
+            .post("http://localhost:3000/user-data-post", data)
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err));
+        });
       })
       .catch((err) => {
         console.log(err);

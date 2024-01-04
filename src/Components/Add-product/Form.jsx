@@ -37,7 +37,11 @@ const Form = () => {
             img: img,
           };
           axios
-            .post("http://localhost:3000/save-data", data)
+            .post("http://localhost:3000/save-data", data, {
+              headers: {
+                authoraization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            })
             .then((res) => {
               if (res.data.acknowledged) {
                 Swal.fire("successfuly posted", "", "success");
