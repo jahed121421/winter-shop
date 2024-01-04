@@ -19,7 +19,7 @@ const Menu = (
       <ActiveLink href="/cart">Cart</ActiveLink>
     </li>
     <li>
-      <ActiveLink href="/add-product">Add Product</ActiveLink>
+      <ActiveLink href="/dashboard">Dashboard</ActiveLink>
     </li>
   </>
 );

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 const useSingleproduct = () => {
   const { id } = useParams();
-
   const {
     data: singleProduct,
     isLoading: singleProductLoading,

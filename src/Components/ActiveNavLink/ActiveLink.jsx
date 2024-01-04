@@ -7,7 +7,7 @@ const ActiveLink = ({ children, href, end }) => {
       end={end}
       className={({ isActive }) =>
         `${
-          isActive ? " text-blue-700 font-bold border-b-2 border-blue-700" : ""
+          isActive ? "  font-bold border-b-2 border-blue-700" : ""
         } rounded-none mx-2`
       }
     >

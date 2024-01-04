@@ -4,9 +4,10 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Plus } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+
 const Cart = () => {
   const [cartData, cartLoading, refetch] = useCartData();
-  console.log(cartData);
+
   if (cartLoading) {
     return <>Loading...</>;
   }

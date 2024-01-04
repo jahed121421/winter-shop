@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SingleProduct from "./Components/Single Product/SingleProduct";
 import Cart from "./Components/Cart/Cart";
+import DashBoard from "./Components/DashBoard/DashBoard";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "dashboard",
+        element: <DashBoard />,
       },
       {
         path: "products",
