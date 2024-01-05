@@ -56,7 +56,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               {Menu}
             </ul>
@@ -65,7 +65,7 @@ const NavBar = () => {
             <img
               src="https://th.bing.com/th/id/OIP.zslm2GqxFGKrpjoWWW27RAHaHa?rs=1&pid=ImgDetMain"
               alt=""
-              className="w-12 h-12"
+              className="h-12 w-12"
             />
           </Link>
         </div>

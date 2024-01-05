@@ -27,7 +27,7 @@ const AllMyPost = () => {
     <>
       <Title title="My All Post" />
       <div className="overflow-x-auto">
-        <table className="table table-xs table-pin-rows table-pin-cols">
+        <table className="table table-pin-rows table-pin-cols table-xs">
           <thead>
             <tr>
               <th></th>

@@ -53,12 +53,12 @@ const Cart = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="bg-gray-100 h-screen py-8">
+    <div className="h-screen bg-gray-100 py-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl font-semibold mb-4">Shopping Cart</h1>
-        <div className="flex flex-col md:flex-row gap-4">
+        <h1 className="mb-4 text-2xl font-semibold">Shopping Cart</h1>
+        <div className="flex flex-col gap-4 md:flex-row">
           <div className="md:w-3/4">
-            <div className="bg-white rounded-lg shadow-md p-6 mb-4">
+            <div className="mb-4 rounded-lg bg-white p-6 shadow-md">
               <table className="w-full">
                 <thead>
                   <tr>
@@ -75,7 +75,7 @@ const Cart = () => {
                       <td className="py-4">
                         <div className="flex items-center">
                           <img
-                            className="h-16 w-16 mr-4"
+                            className="mr-4 h-16 w-16"
                             src={cartDatas.img}
                             alt="Product image"
                           />
@@ -93,16 +93,16 @@ const Cart = () => {
                                 ? () => Decrese(cartDatas._id, cartDatas)
                                 : () => deletPost(cartDatas._id)
                             }
-                            className="border rounded-md py-2 px-4 mr-2"
+                            className="mr-2 rounded-md border px-4 py-2"
                           >
                             <Minus />
                           </button>
-                          <span className="text-center w-8">
+                          <span className="w-8 text-center">
                             {cartDatas.bag}
                           </span>
                           <button
                             onClick={() => Increse(cartDatas._id, cartDatas)}
-                            className="border rounded-md py-2 px-4 ml-2"
+                            className="ml-2 rounded-md border px-4 py-2"
                           >
                             <Plus />
                           </button>
@@ -125,23 +125,23 @@ const Cart = () => {
             </div>
           </div>
           <div className="md:w-1/4">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-lg font-semibold mb-4">Summary</h2>
-              <div className="flex justify-between mb-2">
+            <div className="rounded-lg bg-white p-6 shadow-md">
+              <h2 className="mb-4 text-lg font-semibold">Summary</h2>
+              <div className="mb-2 flex justify-between">
                 <span>Subtotal</span>
                 <span>${grandtotal}</span>
               </div>
-              <div className="flex justify-between mb-2">
+              <div className="mb-2 flex justify-between">
                 <span>Item</span>
                 <span>{cartData.length}</span>
               </div>
 
               <hr className="my-2" />
-              <div className="flex justify-between mb-2">
+              <div className="mb-2 flex justify-between">
                 <span className="font-semibold">Total</span>
                 <span className="font-semibold">${grandtotal}</span>
               </div>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">
+              <button className="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white">
                 Checkout
               </button>
             </div>

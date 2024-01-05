@@ -21,7 +21,7 @@ const Form = () => {
     await axios
       .post(
         "https://api.imgbb.com/1/upload?key=7648e128c857ca1a38a7eecbb0ff0624",
-        formData
+        formData,
       )
       .then((res) => {
         if (res) {
@@ -64,7 +64,7 @@ const Form = () => {
           name="ProductName"
           placeholder="Product-name"
           id="product-name"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
         />
       </div>
       <div>
@@ -77,7 +77,7 @@ const Form = () => {
           name="sallername"
           placeholder="SallerName"
           id="saller-name"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
         />
       </div>
       <div>
@@ -90,7 +90,7 @@ const Form = () => {
           name="price"
           placeholder="Price"
           id="price"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
         />
       </div>
       <div>
@@ -103,7 +103,7 @@ const Form = () => {
           name="photo"
           placeholder="Photo"
           id="photo"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
           accept="image/*"
         />
       </div>
@@ -117,7 +117,7 @@ const Form = () => {
           name="quantity"
           placeholder="Quantity"
           id="quantity"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
         />
       </div>
       <div>
@@ -130,18 +130,18 @@ const Form = () => {
           name="description"
           placeholder="Description"
           id="description"
-          className="md:w-3/5 w-4/5 h-36 p-2"
+          className="h-36 w-4/5 p-2 md:w-3/5"
         />
       </div>
       <input
         type="submit"
         value="Save"
-        className="btn md:btn-wide bg-orange-600"
+        className="btn bg-orange-600 md:btn-wide"
       />
       <input
         type="reset"
         value="Reset"
-        className="btn md:btn-wide bg-orange-600"
+        className="btn bg-orange-600 md:btn-wide"
       />
     </form>
   );

@@ -7,7 +7,7 @@ const Display = () => {
   return (
     <div>
       <NavBar />
-      <div className="h-full mx-10">
+      <div className="mx-10 h-full">
         <Outlet />
       </div>
       <Footer />

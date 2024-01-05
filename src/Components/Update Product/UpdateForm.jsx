@@ -2,8 +2,10 @@ import axios from "axios";
 import useSingleproduct from "../../Coustom Hook/useSingleproduct";
 import Swal from "sweetalert2";
 import React from "react";
+import { useParams } from "react-router-dom";
 const UpdateForm = () => {
   const [singleProduct, singleProductLoading, refetch] = useSingleproduct();
+
   if (singleProductLoading) {
     return <>Loading...</>;
   }
@@ -17,6 +19,7 @@ const UpdateForm = () => {
     status,
     _id,
   } = singleProduct;
+
   const savedata = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -33,7 +36,11 @@ const UpdateForm = () => {
       description,
     };
     axios
-      .patch(`http://localhost:3000/update-product/${_id}`, data)
+      .patch(`http://localhost:3000/update-product/${_id}`, data, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
       .then((res) => {
         if (res.data.modifiedCount === 1) {
           Swal.fire("successfuly updated", "", "success");
@@ -54,7 +61,7 @@ const UpdateForm = () => {
           name="ProductName"
           placeholder="Product-name"
           id="product-name"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
           defaultValue={productName}
         />
       </div>
@@ -68,7 +75,7 @@ const UpdateForm = () => {
           name="sallername"
           placeholder="SallerName"
           id="saller-name"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
           defaultValue={sallerName}
         />
       </div>
@@ -83,7 +90,7 @@ const UpdateForm = () => {
           name="price"
           placeholder="Price"
           id="price"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
           defaultValue={price}
         />
       </div>
@@ -97,7 +104,7 @@ const UpdateForm = () => {
           name="quantity"
           placeholder="Quantity"
           id="quantity"
-          className="md:w-3/5 w-4/5 h-10 p-2"
+          className="h-10 w-4/5 p-2 md:w-3/5"
           defaultValue={quantity}
         />
       </div>
@@ -111,19 +118,19 @@ const UpdateForm = () => {
           name="description"
           placeholder="Description"
           id="description"
-          className="md:w-3/5 w-4/5 h-36 p-2"
+          className="h-36 w-4/5 p-2 md:w-3/5"
           defaultValue={description}
         />
       </div>
       <input
         type="submit"
         value="Update"
-        className="btn md:btn-wide bg-orange-600"
+        className="btn bg-orange-600 md:btn-wide"
       />
       <input
         type="reset"
         value="Reset"
-        className="btn md:btn-wide bg-orange-600"
+        className="btn bg-orange-600 md:btn-wide"
       />
     </form>
   );

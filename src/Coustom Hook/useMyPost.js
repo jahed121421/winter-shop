@@ -13,7 +13,7 @@ const useMyPost = () => {
     queryKey: ["myownpost", user?.email],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/my-data/${user.email}`
+        `http://localhost:3000/my-data/${user.email}`,
       );
       return res.data;
     },

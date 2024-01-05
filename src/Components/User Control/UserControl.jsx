@@ -61,8 +61,8 @@ const UserControl = () => {
                       onClick={() => MakeAdmin(userDatas._id)}
                       className={`${
                         userDatas.role === "admin"
-                          ? "font-bold text-lg"
-                          : "font-semibold text-sm"
+                          ? "text-lg font-bold"
+                          : "text-sm font-semibold"
                       }`}
                     >
                       Admin
@@ -72,8 +72,8 @@ const UserControl = () => {
                       onClick={() => MakeSaller(userDatas._id)}
                       className={`${
                         userDatas.role === "saller"
-                          ? "font-bold text-lg"
-                          : "font-semibold text-sm"
+                          ? "text-lg font-bold"
+                          : "text-sm font-semibold"
                       }`}
                     >
                       saller

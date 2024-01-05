@@ -12,9 +12,10 @@ const Products = () => {
   return (
     <>
       <Title title="Product" subtitle="All products" />
-      <div className="md:grid md:grid-cols-3 flex flex-col gap-5 items-center my-10">
+      <div className="my-10 flex flex-col items-center gap-5 md:grid md:grid-cols-3">
         {data.map((products, i) => (
           <div key={i} className="card w-96 bg-base-100 shadow-xl ">
+            <div className="p-2 pt-4">lg</div>
             <figure>
               <img src={products.img} alt="Shoes" />
             </figure>

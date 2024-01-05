@@ -96,5 +96,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <ToastContainer />
       </QueryClientProvider>
     </AuthProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

@@ -14,7 +14,7 @@ const useSaller = () => {
     enabled: !loading,
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/check-saller/${user?.email}`
+        `http://localhost:3000/check-saller/${user?.email}`,
       );
 
       return res.data.saller;

@@ -14,7 +14,12 @@ const useAdmin = () => {
     enabled: !loading,
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/check-admin/${user?.email}`
+        `http://localhost:3000/check-admin/${user?.email}`,
+        {
+          headers: {
+            authoraization: ` Bearer ${localStorage.getItem("token")}`,
+          },
+        },
       );
 
       return res.data.admin;

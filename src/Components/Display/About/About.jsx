@@ -2,7 +2,7 @@ import Title from "./../../Title/Title";
 import React from "react";
 const About = () => {
   return (
-    <div className="w-3/4 mx-auto">
+    <div className="mx-auto w-3/4">
       <Title title="About" />
       <div className="flex gap-8">
         <p className="text-justify">

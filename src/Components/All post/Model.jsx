@@ -55,7 +55,7 @@ const Model = ({ isOpen, setIsOpen, id, refetch }) => {
                 </Dialog.Title>
                 <div className="mt-2">
                   <input
-                    className="text-sm text-gray-500 w-full h-10 p-2"
+                    className="h-10 w-full p-2 text-sm text-gray-500"
                     name="message"
                     onChange={handleChange}
                   />

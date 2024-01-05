@@ -22,7 +22,7 @@ const AllPost = () => {
     <>
       <Title title="All Post" />
       <div className="overflow-x-auto">
-        <table className="table table-xs table-pin-rows table-pin-cols capitalize">
+        <table className="table table-pin-rows table-pin-cols table-xs capitalize">
           <thead>
             <tr>
               <th>Serial</th>

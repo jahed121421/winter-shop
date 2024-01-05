@@ -38,7 +38,7 @@ const Register = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register now!</h1>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card w-full max-w-sm shrink-0 bg-base-100 shadow-2xl">
             <form className="card-body" onSubmit={RegisterUser}>
               <div className="form-control">
                 <label className="label">
@@ -64,7 +64,7 @@ const Register = () => {
                   required
                 />
                 <label className="label">
-                  <Link to="/login" className="label-text-alt link link-hover">
+                  <Link to="/login" className="link-hover link label-text-alt">
                     Already have an account
                   </Link>
                 </label>
