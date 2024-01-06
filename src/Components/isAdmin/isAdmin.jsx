@@ -3,7 +3,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import React from "react";
 import useAdmin from "./../../Coustom Hook/useAdmin";
-const isAdmin = ({ children }) => {
+const Admin = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const { isAdmin } = useAdmin();
 
@@ -18,4 +18,4 @@ const isAdmin = ({ children }) => {
   }
 };
 
-export default isAdmin;
+export default Admin;

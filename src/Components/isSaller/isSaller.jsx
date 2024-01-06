@@ -3,7 +3,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import React from "react";
 import useSaller from "./../../Coustom Hook/useSaller";
-const isSaller = ({ children }) => {
+const Saller = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const { isSaller } = useSaller();
 
@@ -18,4 +18,4 @@ const isSaller = ({ children }) => {
   }
 };
 
-export default isSaller;
+export default Saller;

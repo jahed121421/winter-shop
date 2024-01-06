@@ -143,7 +143,10 @@ const Cart = () => {
                 <span className="font-semibold">${grandtotal}</span>
               </div>
               <Link to="/payments">
-                <button className="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white">
+                <button
+                  disabled={cartData.length === 0}
+                  className="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white"
+                >
                   Checkout
                 </button>
               </Link>

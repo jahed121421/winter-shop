@@ -11,7 +11,7 @@ const DashBoard = () => {
   }
   return (
     <div className="w-full">
-      <div className="flex h-full w-2/5 flex-col items-center justify-center bg-red-500 p-5 text-left text-white md:w-1/5">
+      <div className="flex h-full flex-col items-center justify-center bg-red-500 p-5 text-left text-white ">
         <h1>DashBoard</h1>
         {isSaller ? (
           <ul className="flex flex-col gap-y-5">
@@ -43,7 +43,6 @@ const DashBoard = () => {
           ""
         )}
       </div>
-      <div className="4/5"></div>
     </div>
   );
 };

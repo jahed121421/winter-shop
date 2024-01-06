@@ -63,6 +63,7 @@ const Checkout = ({ grandtotal, cartData }) => {
         totalItem: cartData?.length,
         transition: paymentIntent?.id,
         date: new Date(),
+        status: "pending",
         items: cartData.map((cartdatas) => ({
           id: cartdatas.menuId,
           quantity: cartdatas.bag,

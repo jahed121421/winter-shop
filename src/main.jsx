@@ -21,6 +21,8 @@ import SingleProduct from "./Components/Single Product/SingleProduct";
 import Cart from "./Components/Cart/Cart";
 import DashBoard from "./Components/DashBoard/DashBoard";
 import Payment from "./Components/PayMent/Payment";
+import Admin from "./Components/isAdmin/isAdmin";
+import Saller from "./Components/isSaller/isSaller";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -34,12 +36,20 @@ const router = createBrowserRouter([
       },
       {
         path: "add-product",
-        element: <AddProduct />,
+        element: (
+          <Saller>
+            <AddProduct />
+          </Saller>
+        ),
       },
 
       {
         path: "update-product/:id",
-        element: <UpdateProduct />,
+        element: (
+          <Saller>
+            <UpdateProduct />
+          </Saller>
+        ),
       },
       {
         path: "login",
@@ -51,11 +61,19 @@ const router = createBrowserRouter([
       },
       {
         path: "user-list",
-        element: <UserControl />,
+        element: (
+          <Admin>
+            <UserControl />
+          </Admin>
+        ),
       },
       {
         path: "all-post",
-        element: <AllPost />,
+        element: (
+          <Admin>
+            <AllPost />
+          </Admin>
+        ),
       },
       {
         path: "all-my-post",
@@ -71,7 +89,11 @@ const router = createBrowserRouter([
       },
       {
         path: "payments",
-        element: <Payment />,
+        element: (
+          <PrivateRoute>
+            <Payment />
+          </PrivateRoute>
+        ),
       },
       {
         path: "products",

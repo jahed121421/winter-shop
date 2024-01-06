@@ -53,6 +53,7 @@ const SingleProduct = () => {
               <div className="w-1/2 px-2">
                 <button
                   onClick={AddtoCart}
+                  disabled={quantity == 0}
                   className="w-full rounded-full bg-blue-900 px-4 py-2 font-bold text-white hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
                 >
                   Add to Cart
@@ -81,7 +82,7 @@ const SingleProduct = () => {
                   Quantity:{" "}
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  {quantity}
+                  {quantity == 0 ? "OUT OF STOCK" : quantity}
                 </span>
               </div>
             </div>

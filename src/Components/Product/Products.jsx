@@ -4,7 +4,7 @@ import Title from "../Title/Title";
 import React from "react";
 const Products = () => {
   const [data, isLoading] = useProduct();
-
+  console.log(data);
   if (isLoading) {
     return <>Loading</>;
   }
@@ -15,7 +15,6 @@ const Products = () => {
       <div className="my-10 flex flex-col items-center gap-5 md:grid md:grid-cols-3">
         {data.map((products, i) => (
           <div key={i} className="card w-96 bg-base-100 shadow-xl ">
-            <div className="p-2 pt-4">lg</div>
             <figure>
               <img src={products.img} alt="Shoes" />
             </figure>
