@@ -4,10 +4,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Plus } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cartData, cartLoading, refetch] = useCartData();
-
+  console.log(cartData);
   if (cartLoading) {
     return <>Loading...</>;
   }
@@ -141,9 +142,11 @@ const Cart = () => {
                 <span className="font-semibold">Total</span>
                 <span className="font-semibold">${grandtotal}</span>
               </div>
-              <button className="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white">
-                Checkout
-              </button>
+              <Link to="/payments">
+                <button className="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white">
+                  Checkout
+                </button>
+              </Link>
             </div>
           </div>
         </div>

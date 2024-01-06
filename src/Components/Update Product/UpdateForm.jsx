@@ -75,11 +75,10 @@ const UpdateForm = () => {
           name="sallername"
           placeholder="SallerName"
           id="saller-name"
-          className="h-10 w-4/5 p-2 md:w-3/5 "
+          className="h-10 w-4/5 p-2  md:w-3/5"
           defaultValue={sallerName}
         />
       </div>
-
       <div>
         <label htmlFor="price" className="mr-5 uppercase">
           Price

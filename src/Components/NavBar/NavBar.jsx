@@ -30,6 +30,7 @@ const NavBar = () => {
     SignOut()
       .then((res) => {
         toast("Logout successfully");
+        localStorage.removeItem("token");
       })
       .catch((err) => console.log(err));
   };
